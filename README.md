@@ -2,4 +2,10 @@
 
 Project Title: Dead Lock Avoidance using Bankers Algorithm
 
-The motivation behind this assignment is to use this bankers algorithm to avoid dead lock situations
+The motivation to code this algorithm is because this assignment is a requirement for the course 
+
+to install and run our code download an IDE such as Visual Studio Code and the needed extensions to run c files
+
+
+
+
