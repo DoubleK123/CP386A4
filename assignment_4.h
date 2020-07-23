@@ -1,5 +1,5 @@
 int read_file(char* fileName, int* maximum);
-void RQ(char* command);
+int RQ(char* command);
 void RL(char*  command);
 void asterisk();
 void run();

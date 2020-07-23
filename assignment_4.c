@@ -70,7 +70,12 @@ int read_file(char* fileName, int* maximum){
     return 0;
 }
 
-void RQ(char* command){
+int RQ(char* command){
+    // request resources function
+
+
+    return 0;
+
 
 }
 
