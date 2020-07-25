@@ -20,7 +20,8 @@ int main(int argc, char* argv[]){
     
     int i;
     int customer_number;
-    int command[4], a,b,c,d;
+    int a,b,c,d;
+    char command[4];
     if(argc>0){
         int index=0;
         for(i=1;i<argc;i++){
@@ -45,14 +46,13 @@ int main(int argc, char* argv[]){
     printf("enter command: ");
     scanf("%s %d %d %d %d %d", command, &customer_number, &a,&b,&c,&d);
     
-    if(command=="RQ"){
+   if(strcmp(command,"RQ")==0){
         request[0]=a;
         request[1]=b;
         request[2]=c;
         request[3]=d;
         RQ(customer_number);
     }
-
     // testing perpose for maximum 2d array
     // for(int k=0;k<NUM_OF_RES;k++){
     //     for(int b=0;b<NUM_OF_CUST;b++){
