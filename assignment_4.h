@@ -1,6 +1,6 @@
 int read_file(char* fileName, int* maximum);
-int RQ(char* command);
-void RL(char*  command);
+int RQ(int);
+void RL(int);
 void asterisk();
 void run();
-int safetyAlgorithm();
+int safetyAlgorithm(int, int*);
