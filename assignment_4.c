@@ -125,9 +125,8 @@ int RQ(int customer_number){
         available[i]-=request[i];
         allocation[customer_number][i]+=request[i];
     }
+
     return 0;
-
-
 }
 
 void RL(int customer_number){
@@ -143,6 +142,7 @@ void run(){
 
 void asterisk(){
 
+    printf("\n");
     printf("available array\n");
     for(int i=0;i<4;i++){
         printf("%d ", available[i]);
@@ -172,7 +172,6 @@ void asterisk(){
         printf("%d ", need[i]);
     }
     printf("\n");
-
 }
 
 int safetyAlgorithm(int customer_number, int* request){
