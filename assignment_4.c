@@ -4,8 +4,8 @@
 #include <sys/stat.h>
 #include <string.h>
 
-#define NUM_OF_CUST 5 //columns
-#define NUM_OF_RES 4 //rows
+#define NUM_OF_CUST 5 //rows
+#define NUM_OF_RES 4 //columns
 
 int available[4];
 int maximum[NUM_OF_RES][NUM_OF_CUST];
