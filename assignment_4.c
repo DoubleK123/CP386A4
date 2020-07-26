@@ -45,7 +45,7 @@ int main(int argc, char* argv[]){
 
     printf("enter command: ");
     scanf("%s %d %d %d %d %d", command, &customer_number, &a,&b,&c,&d);
-    
+    printf("\n");
     if(strcmp(command,"RQ")==0){
         request[0]=a;
         request[1]=b;
