@@ -8,8 +8,8 @@
 #define NUM_OF_RES 4 //columns
 
 int available[4];
-int maximum[NUM_OF_RES][NUM_OF_CUST];
-int allocation[NUM_OF_RES][NUM_OF_CUST];
+int maximum[NUM_OF_CUST][NUM_OF_RES];
+int allocation[NUM_OF_CUST][NUM_OF_RES];
 int need[NUM_OF_RES];
 int request[NUM_OF_RES];
 int release[NUM_OF_RES];
@@ -95,9 +95,9 @@ int read_file(char* fileName, int* maximum){
             }
         }
 
-        for(int i=0; i< NUM_OF_RES;i++){
-            for(int j=0;j<NUM_OF_CUST;j++){
-                *(maximum+i*NUM_OF_CUST+j)=array[i*NUM_OF_CUST+j];
+        for(int i=0; i< NUM_OF_CUST;i++){
+            for(int j=0;j<NUM_OF_RES;j++){
+                *(maximum+i*NUM_OF_RES+j)=array[i*NUM_OF_RES+j];
             }
         }
         return 1;
@@ -150,18 +150,18 @@ void asterisk(){
     printf("\n");
 
     printf("maximum array\n");
-    for(int i=0; i <NUM_OF_RES;i++){
+    for(int i=0; i <NUM_OF_CUST;i++){
         printf("\n");
-        for(int j=0;j<NUM_OF_CUST;j++){
+        for(int j=0;j<NUM_OF_RES;j++){
             printf("%d\t",maximum[i][j]);
         }
     }
     printf("\n");
 
     printf("allocation\n");
-    for(int i=0; i <NUM_OF_RES;i++){
+    for(int i=0; i <NUM_OF_CUST;i++){
         printf("\n");
-        for(int j=0;j<NUM_OF_CUST;j++){
+        for(int j=0;j<NUM_OF_RES;j++){
             printf("%d\t",allocation[i][j]);
         }
     }
