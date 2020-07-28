@@ -175,6 +175,7 @@ void asterisk(){
 }
 
 int safetyAlgorithm(int customer_number, int* request){
+    // implementing safety algorithm 
 
 
     for (int i =0; i <NUM_OF_RES; i++){
