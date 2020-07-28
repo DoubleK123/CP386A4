@@ -175,6 +175,14 @@ void asterisk(){
 }
 
 int safetyAlgorithm(int customer_number, int* request){
-    
+
+
+    for (int i =0; i <NUM_OF_RES; i++){
+        if(maximum[customer_number][i]-allocation[customer_number][i] <= available[i]){
+
+        }
+
+
+    }
     return 0;
 }
