@@ -3,6 +3,7 @@
 #include "assignment_4.h"
 #include <sys/stat.h>
 #include <string.h>
+#include <unistd.h>
 
 #define NUM_OF_CUST 5 //rows
 #define NUM_OF_RES 4 //columns
@@ -16,7 +17,6 @@ int release[NUM_OF_RES];
 
 
 int main(int argc, char* argv[]){
-    
     
     int i;
     int customer_number;
@@ -137,6 +137,7 @@ void RL(int customer_number){
 }
 
 void run(){
+    // int running_thread = 1;
 
 }
 
@@ -175,15 +176,57 @@ void asterisk(){
 }
 
 int safetyAlgorithm(int customer_number, int* request){
-    // implementing safety algorithm 
-
-
-    for (int i =0; i <NUM_OF_RES; i++){
-        if(maximum[customer_number][i]-allocation[customer_number][i] <= available[i]){
-
-        }
-
-
+    int copy_resources[4];
+    int copy_allocation[NUM_OF_CUST][NUM_OF_RES];
+    // int flag = 0;
+    for(int i=0; i<4;i++){
+        copy_resources[i]=available[i];
     }
-    return 0;
+      for(int i=0; i <NUM_OF_CUST;i++){
+        for(int j=0;j<NUM_OF_RES;j++){
+            copy_allocation[i][j]=allocation[i][j];
+        }
+    }
+
+    for(int i=0; i <NUM_OF_RES;i++){
+        if(*(request+i)>copy_resources[i]){
+            return 0;
+        }
+    }
+
+    for(int i=0; i < NUM_OF_RES;i++){
+        copy_resources[i]-=*(request+i);
+        copy_allocation[customer_number][i]+=*(request+i);
+    }
+
+    int finish[NUM_OF_CUST];
+    for(int i=0; i <NUM_OF_CUST;i++){
+        finish[i]=0;
+    }
+
+    for(int i=0; i < NUM_OF_CUST; i++){
+        for(int j=0; j<NUM_OF_RES;j++){
+            if(!finish[j]){
+                for(int k = 0; k<4;k++){
+                    if(!((maximum[j][k] - copy_allocation[j][k]) > copy_resources[k])){
+                        finish[j]=1;
+                        for(int l=0;l<4;l++){
+                            copy_resources[l]+=copy_allocation[j][l];
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    for(int i=0; i <4;i++){
+        copy_allocation[customer_number][i]-=*(request+i);
+    }
+
+    for(int f = 0 ; f< NUM_OF_CUST;f++){
+        if(!finish[f]){
+            return 0;
+        }
+    }
+    return 1;
 }
