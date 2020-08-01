@@ -3,4 +3,4 @@ int RQ(int);
 void RL(int);
 void asterisk();
 void run();
-int safetyAlgorithm(int, int*);
+int safetyAlgorithm(int, int* request);
