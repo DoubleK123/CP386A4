@@ -6,9 +6,9 @@ The motivation to code this algorithm is because this assignment is a requiremen
 
 to install and run our code download an IDE such as Visual Studio Code and the needed extensions to run c files
 
-Kashif implemented the request resources function and added code to the main for testing purposes and also run
+Kashif implemented the request resources function, release resources function  and added code to the main for testing purposes and also run
 
-Hamdan implemented the release resources function, the asterik function and readfile. Also created a makefile 
+Hamdan implemented the  the asterik function,safery algorithm  and readfile. Also created a makefile 
 
 
 To run the code in steps:
