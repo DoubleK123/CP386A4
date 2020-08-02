@@ -1,6 +1,6 @@
-// Kashif Khan khan4310   160694310 Github: 
+// Kashif Khan khan4310   160694310 Github: DoubleK123
 // Hamdan Kasem Kase4140  171874140 Github: Kase4140
-
+// https://github.com/DoubleK123/CP386A4.git
 
 #include <stdio.h>
 #include <stdlib.h>
