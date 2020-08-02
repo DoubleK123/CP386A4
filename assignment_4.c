@@ -1,9 +1,20 @@
+// Kashif Khan khan4310   160694310 Github: 
+// Hamdan Kasem Kase4140  171874140 Github: Kase4140
+
+
 #include <stdio.h>
 #include <stdlib.h>
-#include "assignment_4.h"
 #include <sys/stat.h>
 #include <string.h>
 #include <unistd.h>
+
+
+int read_file(char* fileName, int* maximum);
+int RQ(int);
+void RL(int);
+void asterisk();
+void run();
+int safetyAlgorithm(int, int* request);
 
 #define NUM_OF_CUST 5 //rows
 #define NUM_OF_RES 4 //columns
